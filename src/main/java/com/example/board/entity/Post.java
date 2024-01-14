@@ -5,6 +5,9 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 /**
@@ -17,18 +20,25 @@ public class Post {
 	/** ID */
 	@Id
 	@Column
+	@NotNull
 	private String id = null;
 	
 	/**投稿者*/
 	@Column(length = 20, nullable = false)
+	@NotEmpty
+	@Size(min = 1, max = 20)
 	private String author = null;
 	
 	/**タイトル*/
 	@Column(length = 20, nullable = false)
+	@NotEmpty
+	@Size(min = 1, max = 20)
 	private String title = null;
 	
 	/**内容*/
 	@Column
+	@NotEmpty
+	@Size(min = 1, max = 1000)
 	private String body = null;
 	
 	/**登録日時*/
@@ -39,5 +49,7 @@ public class Post {
 	
 	/** 削除済 */
 	private boolean deleted = false;
+	
+	
 	
 }
