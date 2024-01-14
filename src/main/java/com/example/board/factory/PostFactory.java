@@ -35,7 +35,7 @@ public class PostFactory {
 		post.setId(id);
 		Date current = new Date();
 		post.setCreatedDate(current);
-		post.setUpdatedData(current);
+		post.setUpdatedDate(current);
 		return post;
 	}
 
@@ -50,7 +50,7 @@ public class PostFactory {
 		post.setTitle(form.getTitle());
 		post.setBody(form.getBody());
 		Date current = new Date();
-		post.setUpdatedData(current);
+		post.setUpdatedDate(current);
 		return post;
 	}
 
@@ -63,7 +63,7 @@ public class PostFactory {
 	public static Post deletePost(Post post) {
 		post.setDeleted(true);
 		Date current = new Date();
-		post.setUpdatedData(current);
+		post.setUpdatedDate(current);
 		return post;
 	}
 
