@@ -8,20 +8,22 @@
 		<version>3.1.8-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.example.board</groupId>
 	<artifactId>board</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>board</name>
 	<description>掲示板</description>
+	
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -53,6 +55,10 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -68,6 +74,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -86,6 +93,7 @@
 			</releases>
 		</repository>
 	</repositories>
+	
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-milestones</id>
